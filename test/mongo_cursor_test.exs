@@ -19,17 +19,17 @@
 #     { :ok, mongo: mongo, db: db, anycoll: anycoll }
 #   end
 
-#   test "batchSize", ctx do
-#     assert ctx[:anycoll] |> Mongo.Collection.find |> Map.put(:batchSize, 2) |> Enum.to_list |> Enum.count == 6
-#   end
+#   # test "batchSize", ctx do
+#   #   assert ctx[:anycoll] |> Mongo.Collection.find |> Map.put(:batchSize, 2) |> Enum.to_list |> Enum.count == 6
+#   # end
 
-#   test "batchArray", ctx do
-#     assert ctx[:anycoll] |> Mongo.Collection.find |> Map.put(:batchSize, 3) |> Mongo.Find.exec |> Enum.to_list |> Enum.count == 3
-#   end
+#   # test "batchArray", ctx do
+#   #   assert ctx[:anycoll] |> Mongo.Collection.find |> Map.put(:batchSize, 3) |> Mongo.Find.exec |> Enum.to_list |> Enum.count == 3
+#   # end
 
-#   test "explain", ctx do
-#     assert ctx[:anycoll] |> Mongo.Collection.find |> Mongo.Find.explain
-#   end
+#   # test "explain", ctx do
+#   #   assert ctx[:anycoll] |> Mongo.Collection.find |> Mongo.Find.explain
+#   # end
 
 #   test "find hint", ctx do
 #     ctx[:anycoll] |> Mongo.Collection.createIndex("tst_value", %{value: true})
